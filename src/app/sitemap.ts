@@ -1,10 +1,10 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
-// Required for Cloudflare Pages Edge Runtime
-export const runtime = "edge";
+// Force static export for cPanel static builds
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akhilenterprise.xyz";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akhilenterprise.info";
 
   return [
     {
@@ -13,12 +13,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1.0,
     },
-    // Add additional page routes below if you create more pages in the future
-    // {
-    //   url: `${baseUrl}/about`,
-    //   lastModified: new Date(),
-    //   changeFrequency: 'monthly',
-    //   priority: 0.8,
-    // },
   ];
 }

@@ -9,7 +9,7 @@ export default function PrivacyPage() {
     >
       <section className="space-y-6 text-slate-700 leading-relaxed">
         <p className="text-base text-slate-800 font-medium">
-          At CloudScale Ops (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;), we operate managed cloud deployments, continuous monitoring, and infrastructure provisioning. This Privacy Policy details how we collect, handle, and isolate your technical data when configuring raw cloud infrastructure (AWS, Hetzner, GCP, DigitalOcean).
+          At AkhilOptix (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;), we operate managed cloud deployments, continuous monitoring, and infrastructure provisioning. This Privacy Policy details how we collect, handle, and isolate your technical data when configuring raw cloud infrastructure (AWS, Hetzner, GCP, DigitalOcean).
         </p>
 
         <div className="space-y-3 pt-4 border-t border-slate-100">
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
             3. Data Isolation &amp; Zero Vendor Lock-in
           </h2>
           <p>
-            Unlike proprietary PaaS providers, all infrastructure provisioned by CloudScale Ops lives in <strong>your own cloud accounts</strong>. You retain 100% legal ownership, direct root access, and operational authority over all provisioned VPCs, nodes, and databases.
+            Unlike proprietary PaaS providers, all infrastructure provisioned by AkhilOptix lives in <strong>your own cloud accounts</strong>. You retain 100% legal ownership, direct root access, and operational authority over all provisioned VPCs, nodes, and databases.
           </p>
         </div>
 
@@ -53,8 +53,8 @@ export default function PrivacyPage() {
           </h2>
           <p className="text-sm">
             For SOC-2 audit logs, DPA (Data Processing Agreements), or GDPR inquiries, contact:{" "}
-            <a href="mailto:security@cloudscaleops.com" className="font-mono text-[#ff5722] underline">
-              security@cloudscaleops.com
+            <a href="mailto:support@akhilenterprise.info" className="font-mono text-[#ff5722] underline">
+              support@akhilenterprise.info
             </a>
           </p>
         </div>

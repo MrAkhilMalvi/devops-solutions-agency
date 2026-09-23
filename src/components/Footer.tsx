@@ -244,7 +244,7 @@ export default function DevOpsFooter() {
         {/* Copyright notice */}
         <div className="mt-4 flex flex-col sm:flex-row items-center justify-between text-slate-400 font-mono text-[11px]">
           <div>
-            © {new Date().getFullYear()} CloudScale Ops. All rights reserved.
+            © {new Date().getFullYear()} Akhiloptix. All rights reserved.
           </div>
           <div>BUILT FOR MODERN STARTUP CLOUD RUNTIMES</div>
         </div>

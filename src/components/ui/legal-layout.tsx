@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function LegalPageLayout({
   tag,
@@ -19,12 +20,17 @@ export function LegalPageLayout({
       {/* 1. Header Navigation Bar */}
       <header className="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-[#faf9f6]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-10 lg:px-16 border-x border-slate-200/80">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#ff5722] text-white font-mono text-xs font-bold">
-              λ
-            </div>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            {/* Akhiloptix Icon Mark */}
+            <Image
+              src="/icon.ico"
+              alt="Akhiloptix Logo"
+              width={30}
+              height={30}
+              className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105"
+            />
             <span className="font-bold tracking-tight text-slate-900 text-sm">
-              CloudScale<span className="text-[#ff5722]">.ops</span>
+              AKHIL<span className="text-[#ff5722]">OPTIX</span>
             </span>
           </Link>
 
@@ -64,7 +70,7 @@ export function LegalPageLayout({
             {title}
           </h1>
           <p className="mt-3 font-mono text-xs text-slate-500 uppercase tracking-wider">
-            CloudScale Ops Inc. // Infrastructure Security & Trust Agreement
+            Akhiloptix // Infrastructure Security & Trust Agreement
           </p>
         </div>
 
@@ -88,7 +94,7 @@ export function LegalPageLayout({
               Cookie Settings
             </Link>
           </div>
-          <span className="text-slate-400">© {new Date().getFullYear()} CloudScale Ops.</span>
+          <span className="text-slate-400">© {new Date().getFullYear()} Akhiloptix. All rights reserved.</span>
         </div>
       </main>
     </div>

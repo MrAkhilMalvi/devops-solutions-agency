@@ -1,17 +1,17 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
-// Required for Cloudflare Pages Edge Runtime
-export const runtime = "edge";
+// Force static export for cPanel static builds
+export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akhilenterprise.xyz";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akhilenterprise.info";
 
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/admin/"], // Prevent search engines from indexing API routes or admin pages
+        disallow: ["/api/", "/_next/"],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

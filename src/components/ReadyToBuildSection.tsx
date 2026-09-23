@@ -168,14 +168,6 @@ export default function ReadyToBuildSection() {
                 Start for free
               </motion.a>
 
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                href="#pricing"
-                className="rounded-xl border border-slate-200 bg-slate-50 px-6 py-3 text-xs sm:text-sm font-medium text-slate-700 hover:bg-slate-100/80 transition-colors"
-              >
-                See our plans
-              </motion.a>
             </div>
 
             {/* Sub-link with Chevron */}

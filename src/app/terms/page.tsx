@@ -9,7 +9,7 @@ export default function TermsPage() {
     >
       <section className="space-y-6 text-slate-700 leading-relaxed">
         <p className="text-base text-slate-800 font-medium">
-          These Terms of Service govern your engagement with CloudScale Ops for DevOps automation, Terraform deployments, Kubernetes orchestration, and ongoing infrastructure maintenance.
+          These Terms of Service govern your engagement with AkhilOptix for DevOps automation, Terraform deployments, Kubernetes orchestration, and ongoing infrastructure maintenance.
         </p>
 
         <div className="space-y-3 pt-4 border-t border-slate-100">
@@ -17,7 +17,7 @@ export default function TermsPage() {
             1. Scope of Managed DevOps
           </h2>
           <p className="text-sm">
-            CloudScale Ops delivers infrastructure-as-code (IaC), zero-downtime blue/green migration pipelines, and server-hardening protocols. The client maintains financial responsibility for underlying cloud provider charges (e.g. Amazon Web Services, Hetzner Online GmbH, Google Cloud).
+            AkhilOptix delivers infrastructure-as-code (IaC), zero-downtime blue/green migration pipelines, and server-hardening protocols. The client maintains financial responsibility for underlying cloud provider charges (e.g. Amazon Web Services, Hetzner Online GmbH, Google Cloud).
           </p>
         </div>
 

@@ -36,12 +36,17 @@ export default function CloudShaderInfraHero() {
       <nav className="relative z-30 mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-6 md:px-12">
         {/* Brand */}
         <div className="flex items-center gap-10">
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#ff5722] text-white font-mono text-xs font-bold shadow-xs">
-              λ
-            </div>
+          <a href="#" className="flex items-center gap-2.5 group">
+            {/* Akhiloptix Icon Mark */}
+            <img
+              src="/akhillogo.png"
+              alt="Akhiloptix Logo"
+              className="h-7 w-7 scale-[3.5] object-contain transition-transform duration-200 group-hover:scale-105"
+            />
+
+            {/* Akhiloptix Wordmark */}
             <span className="text-base font-bold tracking-tight text-white drop-shadow-sm">
-              CloudScale<span className="text-[#ff9800]">.ops</span>
+              AKHIL<span className="text-[#ff5722]">OPTIX</span>
             </span>
           </a>
 
@@ -104,7 +109,7 @@ export default function CloudShaderInfraHero() {
             Smarter cloud infra built for real startup budgets
           </h1>
 
-          <p className="mt-5 max-w-xl text-sm sm:text-base text-white/90 leading-relaxed drop-shadow-xs font-normal">
+          <p className="mt-5 max-w-xl text-sm sm:text-base text-black leading-relaxed drop-shadow-xs font-normal">
             Stop overpaying for bloated PaaS markups. We architect, automate,
             and maintain your exact infrastructure requirements—with hardened
             security, 24/7 coverage, and complete execution.
@@ -124,7 +129,7 @@ export default function CloudShaderInfraHero() {
             <a
               href="#how-it-works"
               onClick={(e) => scrollToSection(e, "how-it-works")}
-              className="inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 py-3 text-xs font-mono font-semibold uppercase tracking-wider text-white transition-colors"
+              className="inline-flex items-center gap-2 rounded-md border border-gray/40 bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 py-3 text-xs font-mono font-semibold uppercase tracking-wider text-[#ff5722] transition-colors"
             >
               How It Works
               <span>↓</span>
@@ -145,9 +150,9 @@ export default function CloudShaderInfraHero() {
                 />
               ))}
             </div>
-            <p className="text-xs text-white/90 font-mono">
+            <p className="text-xs text-gray/80 font-mono">
               Helping startups save{" "}
-              <span className="font-bold text-white underline decoration-[#ff5722] underline-offset-4">
+              <span className="font-bold text-gray/40 underline decoration underline-offset-4">
                 50–70%
               </span>{" "}
               on monthly hosting bills.

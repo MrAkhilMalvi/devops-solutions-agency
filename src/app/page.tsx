@@ -8,9 +8,6 @@ import ContactSection from "@/components/ContactSection";
 import ExactFAQSection from "@/components/FAQ";
 import DevOpsFooter from "@/components/Footer";
 
-// Required for Cloudflare Pages Edge Workers runtime
-export const runtime = "edge";
-
 // Page-level metadata overrides root default if needed
 export const metadata: Metadata = {
   title: "Cloud Engine | High-Performance Cloud & DevOps Platform",
