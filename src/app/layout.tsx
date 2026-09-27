@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Inter } from "next/font/google";
+import Script from "next/script";
 
 import "@/app/globals.css";
 import { cn } from "@/lib/utils";
@@ -12,7 +13,6 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "700"],
 });
 
-// Replace with your actual domain once live
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akhilenterprise.info";
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: "Akhiloptix",
     images: [
       {
-        url: "/akhiloptixlogo.jpeg",
+        url: "/akhillogo.png",
         width: 1200,
         height: 630,
         alt: "Akhiloptix Cloud Infrastructure & Cost Optimization",
@@ -69,13 +69,82 @@ export const metadata: Metadata = {
     title: "Akhiloptix | Cloud Infrastructure & Cost Optimization",
     description:
       "End-to-end managed cloud deployments, 24/7 server monitoring, auto-scaling, and cost reduction.",
-    images: ["/akhiloptixlogo.jpeg"],
+    images: ["/akhillogo.png"],
   },
   icons: {
     icon: "/icon.ico",
     shortcut: "/icon.ico",
     apple: "/icon.ico",
   },
+};
+
+// Full Structured Schema definition
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      "name": "Akhiloptix",
+      "legalName": "Akhil Enterprise",
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/akhiloptixlogo.jpeg`
+      },
+      "description": "Akhiloptix provides zero-markup cloud hosting, automated DevOps, Supabase database management, and AWS cost optimization.",
+      "sameAs": [
+        "https://x.com",
+        "https://github.com",
+        "https://linkedin.com"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": "Akhiloptix",
+      "publisher": {
+        "@id": `${siteUrl}/#organization`
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#service`,
+      "name": "Cloud Hosting & Managed Infrastructure Services",
+      "provider": {
+        "@id": `${siteUrl}/#organization`
+      },
+      "serviceType": "Cloud Infrastructure, Managed Hosting, DevOps",
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Akhiloptix Hosting & Cloud Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Starter Plan",
+              "description": "Fast, secure hosting for portfolios, small businesses, and static sites."
+            },
+            "price": "499",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Professional Plan",
+              "description": "Full-stack hosting with managed database (Supabase/Firebase)."
+            },
+            "price": "1499",
+            "priceCurrency": "INR"
+          }
+        ]
+      }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -89,6 +158,15 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("scroll-smooth", "font-sans", inter.variable)}
     >
+      <head>
+        {/* Forces JSON-LD directly into <head> via Next.js Script engine */}
+        <Script
+          id="json-ld-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen bg-slate-50 text-slate-900 dark:bg-[#090D16] dark:text-slate-100 transition-colors duration-300 selection:bg-[#ff5722] selection:text-white`}
       >

@@ -66,6 +66,13 @@ export default function CloudShaderInfraHero() {
             >
               Global Infra
             </a>
+                        <a
+              href="#pricing"
+              onClick={(e) => scrollToSection(e, "pricing")}
+              className="transition hover:text-white hover:underline underline-offset-4"
+            >
+              Pricing
+            </a>
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, "contact")}

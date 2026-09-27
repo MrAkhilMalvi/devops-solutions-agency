@@ -88,7 +88,7 @@ export default function ContactSection() {
           <div className="flex items-center gap-2">
             <div className="h-4 w-1 rounded-full bg-[#ff5722]" />
             <span className="font-mono text-xs tracking-tight text-slate-400">
-              [ <span className="text-[#ff5722] font-semibold">04</span> / 06 ]
+              [ <span className="text-[#ff5722] font-semibold">06</span> / 06 ]
             </span>
             <span className="text-slate-300 text-xs">·</span>
             <span className="font-mono text-xs uppercase tracking-wider text-slate-500">

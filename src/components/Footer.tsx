@@ -1,9 +1,10 @@
 "use client";
 
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { ASCII_LANDSCAPE_FRAMES } from "@/lib/constants";
+import Image from "next/image";
 
 export default function DevOpsFooter() {
   const [frameIdx, setFrameIdx] = useState(0);
@@ -32,14 +33,19 @@ export default function DevOpsFooter() {
             <div className="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between relative bg-[#fdfcfb]">
               {/* Brand Header */}
               <div className="space-y-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#ff5722] text-white font-mono text-xs font-bold shadow-2xs">
-                    λ
-                  </div>
-                  <span className="text-xl font-bold tracking-tight text-slate-900">
-                    CloudScale<span className="text-[#ff5722]">.ops</span>
+                <Link href="/" className="flex items-center gap-2.5 group">
+                  {/* Akhiloptix Icon Mark */}
+                  <Image
+                    src="/icon.ico"
+                    alt="Akhiloptix Logo"
+                    width={30}
+                    height={30}
+                    className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105"
+                  />
+                  <span className="font-bold tracking-tight text-slate-900 text-sm">
+                    AKHIL<span className="text-[#ff5722]">OPTIX</span>
                   </span>
-                </div>
+                </Link>
 
                 <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 max-w-sm leading-snug">
                   The automated way to scale cloud infrastructure.

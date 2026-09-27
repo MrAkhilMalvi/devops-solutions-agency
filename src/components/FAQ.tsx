@@ -27,7 +27,7 @@ export default function ExactFAQSection() {
 
           {/* Technical indicator */}
           <span className="font-mono text-xs tracking-tight text-slate-400">
-            [ <span className="text-[#ff5722] font-semibold">06</span> / 06 ]
+            [ <span className="text-[#ff5722] font-semibold">05</span> / 06 ]
           </span>
           <span className="text-slate-300 text-xs">·</span>
           <span className="font-mono text-xs uppercase tracking-wider text-slate-400">

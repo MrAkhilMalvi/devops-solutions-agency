@@ -7,6 +7,7 @@ import ReadyToBuildSection from "@/components/ReadyToBuildSection";
 import ContactSection from "@/components/ContactSection";
 import ExactFAQSection from "@/components/FAQ";
 import DevOpsFooter from "@/components/Footer";
+import PricingSection from "@/components/PricingSection";
 
 // Page-level metadata overrides root default if needed
 export const metadata: Metadata = {
@@ -31,6 +32,10 @@ export default function CloudEngineLandingPage() {
 
       <div id="global-infra">
         <GlobeConversionSection />
+      </div>
+
+      <div id="pricing">
+        <PricingSection />
       </div>
 
       <div id="faq">
